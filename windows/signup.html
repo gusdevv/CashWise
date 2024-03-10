@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Organizador de Vida y Wallet Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="registro">
+            <h1>Registro</h1>
+            <form>
+                <label for="nombreUsuario">Nombre de Usuario:</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <label for="perfil">Perfil:</label>
+                <select id="perfil" name="perfil">
+                    <option value="personal">Personal</option>
+                    <option value="negocio">Negocio</option>
+                </select>
+
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="venezuela">Venezuela</option>
+                    <!-- Aquí puedes agregar más países según sea necesario -->
+                </select>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
