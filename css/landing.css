@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 *,
 *::before,
@@ -15,11 +15,12 @@
 
 /* ==== CSS VARIABLES ==== */
 :root {
-  --primary-color: #335eea;
-  --link-color: #506690;
-  --btn-hover-color: #2b50c7;
-  --lg-heading: #161c2d;
-  --text-content: #869ab8;
+  --fondo-color: #383638;
+  --color-principal: #c94103;
+  --colores-enlaces: #e78300;
+  --color-hover: #ff6600;
+  --color-heading: #ffb070;
+  --text-content: #fff2da;
   --fixed-header-height: 4.5rem;
 }
 
@@ -28,7 +29,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  background-color: rgba(126, 126, 153, 0.61);
+  background-color: var(--fondo-color);
 }
 ul li {
   list-style-type: none;
@@ -68,8 +69,9 @@ button {
 }
 /* ==== LOGO ==== */
 .logo h2 {
-  font-size: 28px;
-  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  color: var(--color-principal);
 }
 /* ====  NAV-MENU  ==== */
 .nav_menu_list {
@@ -82,17 +84,17 @@ button {
 .nav_menu_item .nav_menu_link {
   font-size: 16.5px;
   line-height: 27px;
-  color: var(--link-color);
+  color: var(--colores-enlaces);
   text-transform: capitalize;
   letter-spacing: 0.5px;
 }
 .nav_menu_link:hover {
-  color: var(--primary-color);
+  color: var(--color-hover);
 }
 .toggle_btn {
   font-size: 20px;
   font-weight: 600;
-  color: var(--lg-heading);
+  color: var(--color-heading);
   z-index: 4;
 }
 .nav_menu,
@@ -127,13 +129,13 @@ button {
   line-height: 55px;
 }
 .main-heading span {
-  color: var(--primary-color);
+  color: var(--color-hover);
 }
 .info-text {
   margin-top: 1.5rem;
   font-size: 19px;
   line-height: 28px;
-  color: #334157;
+  color: var(--text-content);
 }
 .btn_wrapper {
   margin-top: 3.5rem;
@@ -143,10 +145,10 @@ button {
 .btn {
   width: 110px;
   height: 50px;
-  background-color: var(--primary-color);
+  background-color: var(--color-heading);
   display: block;
   font-size: 16px;
-  color: #fff;
+  color: #2e2e2e;
   text-transform: capitalize;
   border-radius: 7px;
   letter-spacing: 1px;
@@ -154,7 +156,7 @@ button {
 }
 .btn:hover {
   transform: translateY(-3px);
-  background-color: var(--btn-hover-color);
+  background-color: var(--color-principal);
 }
 .view_more_btn {
   width: 180px;
@@ -164,10 +166,10 @@ button {
   justify-content: center;
   font-size: 16px;
   letter-spacing: 0;
-  color: #fff;
+  color: #2c2c2c;
   font-weight: 500;
   margin-right: 10px;
-  box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+  box-shadow: 0 0.5rem 1.5rem var(--color-hover);
 }
 .view_more_btn i {
   margin-left: 0.7rem;
@@ -180,14 +182,14 @@ button {
   height: 55px;
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
+  color: #272727;
   letter-spacing: 0;
-  background-color: #e1e7fc;
-  color: #0e2a86;
-  box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+  background-color: var(--color-hover);
+  color: var(--text-content);
+  box-shadow: 0 0.5rem 1.5rem var(--color-hover);
 }
 .documentation_btn:hover {
-  background-color: #d7ddf1;
+  background-color: #2e2e2e;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .grid-item-2 {
@@ -223,7 +225,7 @@ button {
 .icon svg {
   width: 30px;
   height: 30px;
-  color: #6b85d8;
+  color: var(--text-content);
 }
 .featured_info {
   width: 100%;
@@ -233,7 +235,7 @@ button {
   display: block;
   font-size: 21px;
   line-height: 33px;
-  color: var(--lg-heading);
+  color: var(--color-heading);
 }
 .featured_info p {
   display: block;
@@ -246,7 +248,7 @@ button {
 }
 footer {
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--color-principal);
   height: 12px;
   margin-top: 8rem;
 }

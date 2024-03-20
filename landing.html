@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200&family=Odor+Mean+Chey&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200&family=Odor+Mean+Chey&family=Sora:wght@100..800&family=Staatliches&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -28,23 +34,24 @@
             <button class="close_btn" id="close_btn">
                 <i class="ri-close-fill"></i>
               </button>
-  
-            <ul class="nav_menu_list">
-              <li class="nav_menu_item">
-                <a href="#" class="nav_menu_link">Iniciar Sesión</a>
-              </li>
-              <li class="nav_menu_item">
-                <a href="#" class="nav_menu_link">Registrate</a>
-              </li>
-              <li class="nav_menu_item">
-                <a href="#" class="nav_menu_link">Servicios</a>
-              </li>
-              <li class="nav_menu_item">
-                <a href="#" class="nav_menu_link">Sobre Nosotros</a>
-              </li>
-            </ul>
+        <!--OPCIONES DE MENU-->  
+                <div class="menu-principal">
+                    <ul class="nav_menu_list">
+                        <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">Registrate</a>
+                        </li>
+                        <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">Servicios</a>
+                        </li>
+                        <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">Sobre Nosotros</a>
+                        </li>
+                    </ul>
+                </div>    
           </div>
-  
           <button class="toggle_btn" id="toggle_btn">
             <i class="ri-menu-line"></i>
           </button>
@@ -56,21 +63,21 @@
         <div class="grid-cols-2">
           <div class="grid-item-1">
             <h1 class="main-heading">
-              Welcome to <span>Devkit.</span>
+              Bienvenido a <span>CashWise.</span>
               <br />
-              Develop anything.
+              Organiza tus finanzas, tu negocio y tu vida.
             </h1>
             <p class="info-text">
-              Build a beautiful, modern website with flexible components built
-              from scratch.
+              Todo lo que necesitas para hacer crecer tu negocio, 
+              organizar tus finanzas personales y organizar tu vida en un solo espacio.
             </p>
 
             <div class="btn_wrapper">
               <button class="btn view_more_btn">
-                view all pages <i class="ri-arrow-right-line"></i>
+                Registrate ahora <i class="ri-arrow-right-line"></i>
               </button>
 
-              <button class="btn documentation_btn">documentation</button>
+              <button class="btn documentation_btn">Iniciar Sesión</button>
             </div>
           </div>
           <div class="grid-item-2">
@@ -102,7 +109,7 @@
               </svg>
             </div>
             <div class="featured_info">
-              <span>Built for developers </span>
+              <span>Para tus finanzas</span>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 ratione facilis animi voluptas exercitationem molestiae.
@@ -126,7 +133,7 @@
               </svg>
             </div>
             <div class="featured_info">
-              <span>Designed to be modern</span>
+              <span>Para tus tareas</span>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
                 ipsum esse corrupti. Quo, labore debitis!
@@ -151,7 +158,7 @@
               </svg>
             </div>
             <div class="featured_info">
-              <span>Documentation for everything</span>
+              <span>Para tu negocio</span>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
                 nostrum voluptate totam ipsa corrupti vero!
@@ -164,11 +171,8 @@
 
     <footer></footer>
 
-    <!-- ==== ANIMATE ON SCROLL JS CDN -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- ==== GSAP CDN ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <!-- ==== SCRIPT.JS ==== -->
     <script src="./js/landing.js" defer></script>
   </body>
 </html>
