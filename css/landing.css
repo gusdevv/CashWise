@@ -15,21 +15,120 @@
 
 /* ==== CSS VARIABLES ==== */
 :root {
-  --fondo-color: #383638;
-  --color-principal: #c94103;
-  --colores-enlaces: #e78300;
-  --color-hover: #ff6600;
-  --color-heading: #ffb070;
-  --text-content: #fff2da;
-  --fixed-header-height: 4.5rem;
+--dark: #383939;
+--main-green: #149c68;
+--secondary: #38c958;
+--light: #aee637;
+--background: #fffedb;
+--fixed-header-height: 4.5rem;
 }
 
-/* ==== RESET HTML ==== */
+/*CARRUSEL*/
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container {
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  color: var(--main-green);
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 3;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.texto-carousel h3{
+text-align: center;
+color: var(--main-green);
+}
+
+.texto-carousel p{
+  text-align: center;
+  max-width: 100%; /* Ajusta el tamaño máximo del texto */
+  margin-top:  0.5rem; /* Elimina los márgenes predeterminados del párrafo */
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 1rem; /* Añade un poco de espacio alrededor del texto */
+  color: var(--dark);
+
+}
+.slide img {
+  max-width: 26%; /* Ajusta el tamaño máximo de la imagen */
+  height: auto;
+}
+
+
+.slide:nth-child(1) {
+  background-color: var(--background);
+}
+
+.slide:nth-child(2) {
+  background-color: var(--background);
+}
+
+.slide:nth-child(3) {
+  background-color: var(--background);
+}
+
+.slide:nth-child(4) {
+  background-color: var(--background);
+}
+
+
+/*BODY*/
 body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  background-color: var(--fondo-color);
+  background-color: var(--background);
 }
 ul li {
   list-style-type: none;
@@ -70,8 +169,9 @@ button {
 /* ==== LOGO ==== */
 .logo h2 {
   font-family: "Inter", sans-serif;
+  font-weight: bolder;
   font-size: 48px;
-  color: var(--color-principal);
+  color: var(--main-green);
 }
 /* ====  NAV-MENU  ==== */
 .nav_menu_list {
@@ -82,19 +182,19 @@ button {
   margin: 0 2rem;
 }
 .nav_menu_item .nav_menu_link {
-  font-size: 16.5px;
-  line-height: 27px;
-  color: var(--colores-enlaces);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--dark);
   text-transform: capitalize;
   letter-spacing: 0.5px;
 }
 .nav_menu_link:hover {
-  color: var(--color-hover);
+  color: var(--secondary);
 }
 .toggle_btn {
   font-size: 20px;
   font-weight: 600;
-  color: var(--color-heading);
+  color: var(--secondary);
   z-index: 4;
 }
 .nav_menu,
@@ -129,7 +229,7 @@ button {
   line-height: 55px;
 }
 .main-heading span {
-  color: var(--color-hover);
+  color: var(--secondary);
 }
 .info-text {
   margin-top: 1.5rem;
@@ -145,10 +245,10 @@ button {
 .btn {
   width: 110px;
   height: 50px;
-  background-color: var(--color-heading);
+  background-color: var(--main-green);
   display: block;
   font-size: 16px;
-  color: #2e2e2e;
+  color: var(--background);
   text-transform: capitalize;
   border-radius: 7px;
   letter-spacing: 1px;
@@ -156,7 +256,7 @@ button {
 }
 .btn:hover {
   transform: translateY(-3px);
-  background-color: var(--color-principal);
+  background-color: var(--secondary);
 }
 .view_more_btn {
   width: 180px;
@@ -166,10 +266,10 @@ button {
   justify-content: center;
   font-size: 16px;
   letter-spacing: 0;
-  color: #2c2c2c;
+  color: var(--background);
   font-weight: 500;
   margin-right: 10px;
-  box-shadow: 0 0.5rem 1.5rem var(--color-hover);
+  box-shadow: 0 0.5rem 1.5rem var(--dark);
 }
 .view_more_btn i {
   margin-left: 0.7rem;
@@ -184,12 +284,12 @@ button {
   font-weight: 500;
   color: #272727;
   letter-spacing: 0;
-  background-color: var(--color-hover);
+  background-color: var(--background);
   color: var(--text-content);
-  box-shadow: 0 0.5rem 1.5rem var(--color-hover);
+  box-shadow: 0 0.5rem 1.5rem var(--dark);
 }
 .documentation_btn:hover {
-  background-color: #2e2e2e;
+  background-color: var(--secondary);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .grid-item-2 {
@@ -225,7 +325,7 @@ button {
 .icon svg {
   width: 30px;
   height: 30px;
-  color: var(--text-content);
+  color: var(--main-green);
 }
 .featured_info {
   width: 100%;
@@ -235,7 +335,7 @@ button {
   display: block;
   font-size: 21px;
   line-height: 33px;
-  color: var(--color-heading);
+  color: var(--main-green);
 }
 .featured_info p {
   display: block;
@@ -248,7 +348,7 @@ button {
 }
 footer {
   width: 100%;
-  background-color: var(--color-principal);
+  background-color: var(--dark);
   height: 12px;
   margin-top: 8rem;
 }
@@ -274,7 +374,7 @@ footer {
     display: block;
     top: 2.5%;
     right: -100%;
-    background-color: #fff;
+    background-color: var(--background);
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
@@ -297,10 +397,10 @@ footer {
     position: absolute;
     right: 10%;
     font-size: 25px;
-    color: #50689e;
+    color: var(--dark);
   }
   .close_btn:hover {
-    color: #000;
+    color: var(--secondary);
   }
   .wrapper {
     padding: 0 0.7rem;
